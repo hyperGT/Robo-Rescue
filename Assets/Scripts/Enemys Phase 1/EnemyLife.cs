@@ -12,7 +12,7 @@ public class EnemyLife : MonoBehaviour
         if (EnemyHealth <= 0) 
         { 
             Destroy(gameObject);
-        }
+        } 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
