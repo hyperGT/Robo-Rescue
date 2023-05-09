@@ -1,0 +1,34 @@
+
+-animação da gear
+
+-bullet verde
+
+-bullet vermelho
+
+-bullet dos enemies
+
+
+-melhorar a casa
+
+-animação da cutscene
+
+-interface de pause e opções
+
+-ponteiro de mouse
+
+
+backgrounds:
+
+-céu de créditos
+
+-grama de opções
+
+-fase 2 
+
+-boss final
+
+
+-efeitos de fumaça
+
+-sprites de todos os characters versão fudida
+

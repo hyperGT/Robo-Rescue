@@ -1,0 +1,9 @@
+intro: o protagonista que mora em uma ilha, esta fora de sua casa com seu amigo robo. derrepente o vilao aparece e destroi o
+amigo robo com sua nave, e foge. o prot. pega entao seu aviao e vai atras do vilao. ai começa o jogo
+
+a fase 1 o cenaio e o oceano e no final aparece a ilha da fase 2
+
+fase 2 se passa na outra ilha. o cenario e a floresta. ai vai ter o boss. quando 
+derrotado o boss o robo e restaurado
+
+ending: aparece o prot. e seu amigo robo juntos novamente felizes . eo jogo acaba.
