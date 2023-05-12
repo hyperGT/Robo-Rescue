@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7674650612669475853}
   - component: {fileID: 7674650612669475854}
   - component: {fileID: 7674650612669475843}
-  - component: {fileID: 7674650612669475841}
   - component: {fileID: 7674650612669475840}
+  - component: {fileID: 8788581139865588266}
   m_Layer: 0
   m_Name: Black_Nova
   m_TagString: Untagged
@@ -147,19 +147,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &7674650612669475841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7674650612669475850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c604ae65e3069e74f93d3bf96741cee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 3
 --- !u!114 &7674650612669475840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,4 +159,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff27dcdd0c47b1498b9bddfbef2816b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHealth: 40
+  EnemyHealth: 60
+  Points: 200
+--- !u!114 &8788581139865588266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7674650612669475850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c604ae65e3069e74f93d3bf96741cee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToLeftSpeed: 5

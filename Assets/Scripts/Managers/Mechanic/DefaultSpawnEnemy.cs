@@ -8,17 +8,38 @@ public class DefaultSpawnEnemy : MonoBehaviour
 
     [SerializeField] private float VelY;
 
+    [Header("Spawn System")]
+    [SerializeField] private float SpanwRate = 1f;
+
+    private bool CanSpawn = true; 
+
     [SerializeField] private GameObject[] Enemies;
 
-    private bool canSpawn;
+    [SerializeField] private Transform SpawnPosition;
+
 
 
     private void Start()
     {
         CriarRB = GetComponent<Rigidbody2D>();
         Invoke("StartMove", 2f);
+        StartCoroutine(Spawner());
     }
 
+    private IEnumerator Spawner()
+    {
+        WaitForSeconds wait = new WaitForSeconds(SpanwRate);
+
+        while (CanSpawn) 
+        { 
+            yield return wait;
+
+            int EnemyRand = Random.Range(0, Enemies.Length);
+            GameObject EnemyToSpawn = Enemies[EnemyRand];
+
+            Instantiate(EnemyToSpawn, SpawnPosition.position, Quaternion.identity);
+        }
+    }
 
     private void StartMove()
     {

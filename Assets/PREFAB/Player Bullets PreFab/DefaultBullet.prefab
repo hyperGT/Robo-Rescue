@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4906846143712937959}
   - component: {fileID: 4906846143712937958}
   - component: {fileID: 4906846143712937977}
-  - component: {fileID: -3798949478924211073}
+  - component: {fileID: 696250446857483082}
+  - component: {fileID: -2889945521898351373}
   m_Layer: 0
   m_Name: DefaultBullet
   m_TagString: PlayerShot
@@ -102,7 +103,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.28, y: 0.12}
   m_Direction: 1
---- !u!114 &-3798949478924211073
+--- !u!114 &696250446857483082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,5 +115,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbba03dd52b8a4a4ebae2762e6c89f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 14
-  BulletDamage: 20
+  TotalBulletDamage: 20
+--- !u!114 &-2889945521898351373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906846143712937957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c15dff837d269a4ba5fef1de4f1c4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToRightSpeed: 14

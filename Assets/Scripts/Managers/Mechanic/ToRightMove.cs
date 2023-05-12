@@ -2,23 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveBullet : MonoBehaviour
-{
-    // Velocidade do projétil
-    [Header("Bullet Speed")]
-    [SerializeField] private float Speed = 14f;
-    
-    [Header("Bullet Damage")]
-    [SerializeField] private int BulletDamage;
-    
-    //para poder acessar o valor do dano do projétil em qualquer outro código
-    public static int CurrentBulletDamage; 
+/**
+ * Funcional para disparos de projéteis e outras mecânicas que necessitam mover alguma
+ * coisa para direita pela cena(sem uso de física)
+ */
 
+public class ToRightMove : MonoBehaviour
+{
     // Referência à câmera principal
     private Camera MainCamera;
 
     // Armazena o limite da câmera na borda direita
     private float RightEdge;
+
+    [Header("Bullet or Others Obj Speed")]
+    [SerializeField] 
+    private float ToRightSpeed;
 
     private void Start()
     {
@@ -29,16 +28,17 @@ public class MoveBullet : MonoBehaviour
         RightEdge = MainCamera.GetComponent<CameraManager>().RightEdge;
     }
 
+    
+
     void Update()
     {
-        CurrentBulletDamage = BulletDamage;
-        DestroyBullet();
-        transform.Translate(Vector2.right * Speed * Time.deltaTime);
+        MoveRight();
     }
 
-
-    void DestroyBullet()
+    void MoveRight()
     {
+        
+        transform.Translate(Vector2.right * ToRightSpeed * Time.deltaTime);
         // Verifica se o projétil está além do limite da câmera
         if (transform.position.x > RightEdge)
         {
@@ -46,5 +46,4 @@ public class MoveBullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }

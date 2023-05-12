@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         //esse trecho é responsável por limitar de fato a movimentação do player quando chegar a uma certa distância da borda da câmera
         transform.position = new Vector3(
             Mathf.Clamp(transform.position.x, leftBorder + 1, rightBorder - 1),
-            Mathf.Clamp(transform.position.y, topBorder + 1, bottomBorder - 1),
+            Mathf.Clamp(transform.position.y, topBorder + 0.8f, bottomBorder - 2.6f),
             transform.position.z
             );
     }

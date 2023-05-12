@@ -7,11 +7,18 @@ public class EnemyLife : MonoBehaviour
     [Header("Enemy Total Life")]
     [SerializeField] private int EnemyHealth;
 
+    [Header("Points")]
+    [SerializeField] private int Points;
+
+    private int BulletDmg;
+
     private void Update()
     {
+        BulletDmg = BulletDamage.CurrentBulletDamage;
         if (EnemyHealth <= 0) 
         { 
             Destroy(gameObject);
+            UIController.instance.CurrentScorePlayer += Points;
         } 
     }
 
@@ -20,11 +27,12 @@ public class EnemyLife : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerShot"))
         {
             Destroy(collision.gameObject);
-            EnemyHealth -= MoveBullet.CurrentBulletDamage;
+            EnemyHealth -= BulletDmg;
         }
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("perdeu vida");
+            UIController.instance.LifeBar -= 1;
         }
     }
 }
