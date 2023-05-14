@@ -26,14 +26,10 @@ public class OptionsMenu : MonoBehaviour
         for (int i = 0; i < Resolutions.Length; i++)
         {
             //Cria as opções de resolução do Dropdown
-            string Option = Resolutions[i].width + "x" + Resolutions[i].height;                       
+            string Option = Resolutions[i].width + "x" + Resolutions[i].height;
 
-            //verifica se a resolução adicionada não está repetida
-            if (!Options.Contains(Option))
-            {
-                //vai adicionando as opções individualmente na variavel
-                Options.Add(Option);
-            }
+            //vai adicionando as opções individualmente na variavel
+            Options.Add(Option);
 
             if (Resolutions[i].width == Screen.currentResolution.width &&
                 Resolutions[i].height == Screen.currentResolution.height)
