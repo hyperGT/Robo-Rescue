@@ -44,10 +44,12 @@ Programação e desenvolvimento do jogo na unity: [Gabriel Teixeira](https://www
 - -> SFX 
 - + manipula o volume dos efeitos de som
 
-- Tela inicial
+Tela inicial
+
 ![image](https://github.com/hyperGT/Robo-Rescue/assets/63520287/ac2edc99-8cfa-4569-b2d0-38783272b819)
 
-- Menu de opções
+Menu de opções
+
 ![image](https://github.com/hyperGT/Robo-Rescue/assets/63520287/00627cd3-c35b-43c1-82b4-842422a82ba3)
 
 
