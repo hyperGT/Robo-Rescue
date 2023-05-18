@@ -23,6 +23,13 @@ Inimigos da Fase 1:
 
 Tela de Game Over
 
-Programação e Game Design na unity: [Gabriel Teixeira](https://www.instagram.com/gtx_ch/)
+Programação e desenvolvimento do jogo na unity: [Gabriel Teixeira](https://www.instagram.com/gtx_ch/)
+
+- Update 0.12.10 
+
+
+
+
+
 
 
