@@ -1,13 +1,13 @@
 # Robo-Rescue
 
-- Start - 08/Maio/2023
+## Start(0.12.0 new Build) - 08/Maio/2023
 
 Artes por [Diego Torres](https://www.instagram.com/diego.torres_arts/)
 ![image](https://user-images.githubusercontent.com/63520287/236963627-127c64ba-cf52-4512-a47c-80cc4f9613b4.png)
 
 Fonte também criada por Diego Torres
 
-- Update - 0.12.3 - 10/Maio/2023
+## Update - 0.12.3 - 10/Maio/2023
 
 Jogo Montado na unity:
 
@@ -23,6 +23,41 @@ Inimigos da Fase 1:
 
 Tela de Game Over
 
-Programação e Game Design na unity: [Gabriel Teixeira](https://www.instagram.com/gtx_ch/)
+Programação e desenvolvimento do jogo na unity: [Gabriel Teixeira](https://www.instagram.com/gtx_ch/)
+
+## Update 0.12.10 14/Maio/2023
+### Features
+
+- Cena de game over removida e adicionada na tela da fase 
+- Tela inicial do jogo contendo botões funcionais
+- -> Start
+- -> Options 
+- -> Credits
+- A cena de créditos até o atual momento se encontra na cena credits(separada)
+- Painel de opções criado
+- -> Resolution
+- + Permite mudar de resolução
+- -> Music volume
+- + Manipula o volume da música
+- -> FullScreen
+- + Ativa ou desativa o fullscreen
+- -> SFX 
+- + manipula o volume dos efeitos de som
+
+Tela inicial
+
+![image](https://github.com/hyperGT/Robo-Rescue/assets/63520287/ac2edc99-8cfa-4569-b2d0-38783272b819)
+
+Menu de opções
+
+![image](https://github.com/hyperGT/Robo-Rescue/assets/63520287/00627cd3-c35b-43c1-82b4-842422a82ba3)
+
+
+
+
+
+
+
+
 
 
