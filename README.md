@@ -53,6 +53,19 @@ Menu de opções
 ![image](https://github.com/hyperGT/Robo-Rescue/assets/63520287/00627cd3-c35b-43c1-82b4-842422a82ba3)
 
 
+------------------------------------------------------------------------
+
+Features 
+
+- Audio Manager Script Added
+  ![image](https://github.com/hyperGT/Robo-Rescue/assets/63520287/f5b91e8b-8eaa-4d5a-aaf7-eaf7e76d7548)
+
+- New Tutorial Scene(with rgb back)
+![image](https://github.com/hyperGT/Robo-Rescue/assets/63520287/4f76850e-130e-419a-87c0-52cee51a72e6)
+
+
+
+
 
 
 
