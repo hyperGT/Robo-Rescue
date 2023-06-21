@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyLife : MonoBehaviour
 {
-    [Header("Enemy Total Life")]
+    [Header("Enemy Life")]
     [SerializeField] private int EnemyHealth;
 
     [Header("Points")]
@@ -14,27 +14,27 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] private GameObject Explosion;
     [SerializeField] private GameObject PointsObj;
 
-    [Header("Points Spawn Time")]
-    [SerializeField] private float InvokeTime = 0.5f;
-
     private int BulletDmg;
+    
 
     private void Update()
     {
         BulletDmg = BulletDamage.CurrentBulletDamage;
         if (EnemyHealth <= 0) 
         {
-            Invoke("PointsObjSpawn", InvokeTime);
-            Instantiate(Explosion, transform.position, Quaternion.identity);            
+            InstantiateAll();
             Destroy(gameObject);
 
             UIController.instance.CurrentScorePlayer += Points;
         } 
     }
 
-    private void PointsObjSpawn()
+    private void InstantiateAll()
     {
         Instantiate(PointsObj, transform.position, Quaternion.identity);
+        Instantiate(Explosion, transform.position, Quaternion.identity);
+
+        FindObjectOfType<AudioManager>().Play("Explosion");
     }
 
 

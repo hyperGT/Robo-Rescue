@@ -5,50 +5,63 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class OptionsMenu : MonoBehaviour
-{
+{    
+
     public AudioMixer MusicMixer;
     public AudioMixer SFXMixer;
 
-    public Dropdown ResolutionDropdown;
+    [SerializeField] private Dropdown ResolutionDropdown;
 
-    Resolution[] Resolutions;
+    private Resolution[] Resolutions;
+    private List<Resolution> FilteredResolutions;
 
-    private void Start()
+    private float CurrentRefreshRate;
+    private int CurrentResolutionIndex = 0;
+    void Start()
     {
         Resolutions = Screen.resolutions;
+        FilteredResolutions = new List<Resolution>();
 
         ResolutionDropdown.ClearOptions();
+        CurrentRefreshRate = Screen.currentResolution.refreshRate;
 
-        //estrutura de dados List que vai guardar as opções
-        List<string> Options = new List<string>();
-
-        int currentResolutionIndex = 0;
         for (int i = 0; i < Resolutions.Length; i++)
         {
-            //Cria as opções de resolução do Dropdown
-            string Option = Resolutions[i].width + " x " + Resolutions[i].height;
+            if (Resolutions[i].refreshRate == CurrentRefreshRate)
+            {
+                FilteredResolutions.Add(Resolutions[i]);
+            }
+        }
+
+        //estrutura de dados List que vai guardar as opções        
+        List<string> Options = new List<string>();
+
+        for (int i = 0; i < FilteredResolutions.Count; i++)
+        {
+            string Option = FilteredResolutions[i].width + " x " + FilteredResolutions[i].height + " " + FilteredResolutions[i].refreshRate + "Hz";
+            
 
             //vai adicionando as opções individualmente na variavel
             Options.Add(Option);
 
-            if (Resolutions[i].width == Screen.currentResolution.width &&
-                Resolutions[i].height == Screen.currentResolution.height)
+            if (FilteredResolutions[i].width == Screen.width
+                && FilteredResolutions[i].height == Screen.height)
             {
-                currentResolutionIndex = i;
+                CurrentResolutionIndex = i;
             }
         }
 
-        //a variavel options guarda todas as opções de resolução disponiveis 
-        ResolutionDropdown.AddOptions(Options);        
-        ResolutionDropdown.value = currentResolutionIndex;
+        //Cria as opções de resolução do Dropdown
+        ResolutionDropdown.AddOptions(Options);
+        ResolutionDropdown.value = CurrentResolutionIndex;
         ResolutionDropdown.RefreshShownValue();
     }
 
     public void SetResolution(int ResolutionIndex)
     {
-        Resolution Resolution = Resolutions[ResolutionIndex];
+        Resolution Resolution = FilteredResolutions[ResolutionIndex];
         Screen.SetResolution(Resolution.width, Resolution.height, Screen.fullScreen);
-    }
+    }                                                                           
 
     public void SetMusicVolume(float MusicVolume)
     {

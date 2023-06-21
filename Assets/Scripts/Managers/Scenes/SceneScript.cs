@@ -8,7 +8,14 @@ public class SceneScript : MonoBehaviour
    public void SceneLoad(string Scene)
    {
         SceneManager.LoadScene(Scene);
-   }
+
+        //#fix
+        //resolve um pequeno problema que está relacionado com o sistema de pause do jogo
+        if(Time.timeScale < 1f)
+        {
+            Time.timeScale = 1f;
+        }       
+    }    
 
     private void Update()
     {

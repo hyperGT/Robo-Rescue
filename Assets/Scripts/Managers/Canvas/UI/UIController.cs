@@ -40,7 +40,7 @@ public class UIController : MonoBehaviour
 
     void SaveScore()
     {
-        ScoreUI.text = CurrentScorePlayer.ToString("00000000");
+        ScoreUI.text = CurrentScorePlayer.ToString("0000000");
     }
 
     void LivesSystem()

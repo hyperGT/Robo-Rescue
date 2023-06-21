@@ -6,9 +6,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // velocidade do obj no eixo X e Y(como estamos falando de uma aeronave ela deve ter velocidades diferentes)
-    [Header("Velocidade do Player")]
-    [SerializeField] private float VelY, VelX;
+    // velocidade do obj no eixo X e Y
+    [Header("Velocidade do Player Eixo Y")]
+    [SerializeField] private float VelocitY;
+
+    [Header("Velocidade do Player Eixo X")]
+    [SerializeField] private float VelocitX;
 
     private Rigidbody2D PlayerRB;
 
@@ -54,11 +57,11 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W) || (Input.GetKey(KeyCode.UpArrow)))
         {
-            PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, VelY); 
+            PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, VelocitY); 
         }
         else if(Input.GetKey(KeyCode.S) || (Input.GetKey(KeyCode.DownArrow)))
         {
-            PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, -VelY);
+            PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, -VelocitY);
         }
         else
         {
@@ -71,11 +74,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.LeftArrow)))
         {
-            PlayerRB.velocity = new Vector2(-VelX, PlayerRB.velocity.y);
+            PlayerRB.velocity = new Vector2(-VelocitX, PlayerRB.velocity.y);
         }
         else if (Input.GetKey(KeyCode.D) || (Input.GetKey(KeyCode.RightArrow)))
         {
-            PlayerRB.velocity = new Vector2(VelX, PlayerRB.velocity.y);
+            PlayerRB.velocity = new Vector2(VelocitX, PlayerRB.velocity.y);
         }
         else
         {

@@ -153,6 +153,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyHealth: 80
   Points: 100
+  Explosion: {fileID: 2947986683163326387, guid: 8e23fe4c445ce10478e7176e1264d16e, type: 3}
+  PointsObj: {fileID: 6396410588501321023, guid: e6a2f34a2491e7e418b1ab2fbbc5a1e3, type: 3}
+  InvokeTime: 0
 --- !u!50 &8151985499615054995
 Rigidbody2D:
   serializedVersion: 4
