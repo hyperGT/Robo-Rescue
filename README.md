@@ -54,10 +54,11 @@ Menu de opções
 
 
 ------------------------------------------------------------------------
-
-Features 
+## New Update: Wednesday, June, 21, 2023 
+###Features 
 
 - Audio Manager Script Added
+  
   ![image](https://github.com/hyperGT/Robo-Rescue/assets/63520287/f5b91e8b-8eaa-4d5a-aaf7-eaf7e76d7548)
 
 - New Tutorial Scene(with rgb back)
