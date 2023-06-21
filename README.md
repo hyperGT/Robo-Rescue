@@ -55,7 +55,7 @@ Menu de opções
 
 ------------------------------------------------------------------------
 ## New Update: Wednesday, June, 21, 2023 
-###Features 
+### Features 
 
 - Audio Manager Script Added
   
